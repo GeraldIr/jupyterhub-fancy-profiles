@@ -17,8 +17,8 @@ async function buildImage(
   const providerSpec = "gh/" + repo + "/" + ref;
   // FIXME: Assume the binder api is available in the same hostname, under /services/binder/
   const buildEndPointURL = new URL(
-    "/services/binder/build/",
-    window.location.origin,
+    "/build/",
+    "http://binderhub.dev.services.eodc.eu",
   );
   const image = new BinderRepository(
     providerSpec,
